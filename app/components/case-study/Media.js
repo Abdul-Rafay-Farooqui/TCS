@@ -14,7 +14,7 @@ const Media = ({ type, url, style }) => {
   return (
     <>
       {type === "Video" ? (
-        <div style={{ position: "relative", display: "inline-block" }}>
+        <div style={{ position: "relative", display: "inline" }}>
           <video
             ref={videoRef}
             className={style}
@@ -27,22 +27,29 @@ const Media = ({ type, url, style }) => {
           ></video>
           <button
             onClick={toggleMute}
-            style={{
-              position: "absolute",
-              bottom: "10px",
-              right: "10px",
-              border: "none",
-              padding: "10px",
-              cursor: "pointer",
-            }}
+            className="absolute bottom-[10px] right-[10px] flex items-center justify-center bg-tcs-banana group hover:bg-tcs-pure-black size-8 cursor-none r-transition  rounded-[50%] "
           >
             {isMuted ? (
-              <span role="img" aria-label="Muted">
-                <img className="size-7" src="/image/icon/silent.png" />
+              <span className="pl-0.5" role="img" aria-label="Muted">
+                <img
+                  className="size-5 block group-hover:hidden"
+                  src="/image/icon/silent.png"
+                />
+                <img
+                  className="size-5 hidden group-hover:block"
+                  src="/image/icon/silent-y.png"
+                />
               </span>
             ) : (
-              <span role="img" aria-label="Unmuted">
-                <img className="size-7" src="/image/icon/volume.png" />
+              <span className="pl-0.5" role="img" aria-label="Unmuted">
+                <img
+                  className="size-5 group-hover:hidden"
+                  src="/image/icon/volume.png"
+                />
+                <img
+                  className="size-5 hidden group-hover:block"
+                  src="/image/icon/volume-y.png"
+                />
               </span>
             )}
           </button>
