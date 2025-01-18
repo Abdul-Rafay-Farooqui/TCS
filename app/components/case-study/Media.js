@@ -14,7 +14,7 @@ const Media = ({ type, url, style }) => {
   return (
     <>
       {type === "Video" ? (
-        <div style={{ position: "relative", display: "inline" }}>
+        <div className="relative inline overflow-visible">
           <video
             ref={videoRef}
             className={style}
@@ -27,7 +27,7 @@ const Media = ({ type, url, style }) => {
           ></video>
           <button
             onClick={toggleMute}
-            className="absolute bottom-6 right-6 flex items-center justify-center bg-tcs-banana group hover:bg-tcs-pure-black size-8 cursor-none r-transition  rounded-[50%] "
+            className="absolute bottom-[24px] right-[24px] flex items-center justify-center bg-tcs-banana group hover:bg-tcs-pure-black size-8 cursor-none r-transition  rounded-[50%] "
           >
             {isMuted ? (
               <span className="pl-0.5" role="img" aria-label="Muted">
