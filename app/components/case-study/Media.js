@@ -25,9 +25,9 @@ const Media = ({ type, url, style }) => {
             src={url}
             controls={false}
           ></video>
-          <button
+          <div
             onClick={toggleMute}
-            className="absolute bottom-[24px] right-[24px] flex items-center justify-center bg-tcs-banana group hover:bg-tcs-pure-black size-8 cursor-none r-transition  rounded-[50%] "
+            className="absolute bottom-[24px] z-50 right-[24px] flex items-center justify-center bg-tcs-banana group hover:bg-tcs-pure-black size-8 cursor-none r-transition  rounded-[50%] "
           >
             {isMuted ? (
               <span className="pl-0.5" role="img" aria-label="Muted">
@@ -52,7 +52,7 @@ const Media = ({ type, url, style }) => {
                 />
               </span>
             )}
-          </button>
+          </div>
         </div>
       ) : (
         <img className={style} src={url} alt="Media content" />
