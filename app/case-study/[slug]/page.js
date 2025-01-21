@@ -49,11 +49,11 @@ const CaseStudy = ({ params }) => {
               </p>
             </div>
             <div
-              className="flex mt-[100px] sm:mt-28 tracking-wide justify-center font-light text-[9.5px] lg:text-sm font-helvetica-neue-regular"
+              className="flex mt-[100px] flex-wrap sm:mt-28 tracking-wide justify-center font-light text-[9.5px] lg:text-sm font-helvetica-neue-regular"
               style={{ color: fgColor }}
             >
               {data?.services?.map((tag, i) => (
-                <p key={i} className="px-1 uppercase text-nowrap">
+                <p key={i} className="px-1 uppercase whitespace-nowrap">
                   {tag}
                 </p>
               ))}

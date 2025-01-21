@@ -14,7 +14,7 @@ const Media = ({ type, url, style }) => {
   return (
     <>
       {type === "Video" ? (
-        <div className="relative inline overflow-visible">
+        <div className="relative">
           <video
             ref={videoRef}
             className={style}
